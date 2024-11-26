@@ -1,5 +1,8 @@
 import Image from "next/image";
+import NextVideo from "next-video";
 import styles from "./page.module.css";
+
+import bgVideo from "../../videos/backgroundvideo.mp4"
 
 export default function Home() {
   return (
@@ -21,8 +24,13 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <video src={module.require('../../public/backgroundvideo.mp4')} autoPlay loop className={styles.video} />
+        <div className = {styles.video}>
+          <NextVideo src={bgVideo} autoPlay loop/>
+        </div>
+        
       </main>
     </div>
   );
+
+  //<video src={module.require('../../public/backgroundvideo.mp4')} autoPlay loop className={styles.video} />
 }

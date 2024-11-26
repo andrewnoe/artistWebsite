@@ -2,7 +2,7 @@ import Image from "next/image";
 import NextVideo from "next-video";
 import styles from "./page.module.css";
 
-import bgVideo from "../../videos/backgroundvideo.mp4"
+import MuxPlayer from "@mux/mux-player-react";
 
 export default function Home() {
   return (
@@ -25,7 +25,14 @@ export default function Home() {
           </div>
         </div>
         <div className = {styles.video}>
-          <NextVideo src={bgVideo} autoPlay loop/>
+        <MuxPlayer
+          streamType="on-demand"
+          playbackId="vDdhnDcRC02Q801jx01gTt68Ttbyd875iAYOlvZzapB3QU"
+          metadataVideoTitle="albumSongSnippetReel"
+          autoPlay
+          loop
+          />
+
         </div>
         
       </main>
@@ -33,4 +40,5 @@ export default function Home() {
   );
 
   //<video src={module.require('../../public/backgroundvideo.mp4')} autoPlay loop className={styles.video} />
+  //<NextVideo src={bgVideo} autoPlay loop/>
 }

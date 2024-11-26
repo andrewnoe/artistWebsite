@@ -1,5 +1,5 @@
-import Image from "next/image";
-import NextVideo from "next-video";
+//import Image from "next/image";
+//import NextVideo from "next-video";
 import styles from "./page.module.css";
 
 import MuxPlayer from "@mux/mux-player-react";

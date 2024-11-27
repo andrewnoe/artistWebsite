@@ -1,17 +1,5 @@
-This is a [Next.js](https://nextjs.org) project.
+## artistWebsite
 
-## Getting Started
+This is a website I created to work on frontend development skills (specifically React/NextJS) and also create a place to showcase my music projects.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+It uses a few packages to display custom content and pulls hosted files from Mux and Google Drive.

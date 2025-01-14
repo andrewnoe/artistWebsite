@@ -6,7 +6,7 @@
  * The player streams audio from external links and can be sorted by type.
  * 
 **/
-
+'use client'
 
 import styles from "../styles/Beats.module.css";
 

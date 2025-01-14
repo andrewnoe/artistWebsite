@@ -4,9 +4,9 @@ import MuxPlayer from "@mux/mux-player-react";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import {useState} from "react";
 
-import Demos from "./pages/demos"
-import Beats from "./pages/beats"
-import Portfolio from "./pages/portfolio"
+import Demos from "./demos/page"
+import Beats from "./beats/page"
+import Portfolio from "./portfolio/page"
 
 import styles from "./page.module.css";
 

@@ -1,16 +1,21 @@
 'use client'
 
+import { AppProps } from 'next/app';
+
 import MuxPlayer from "@mux/mux-player-react";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import {useState} from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 
 import Demos from "./demos/page"
 import Beats from "./beats/page"
 import Portfolio from "./portfolio/page"
+import { useMounted } from './useMounted'
 
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home({ Component, pageProps }: AppProps) {
+
+  
 
     //Managing button status between pages
     const [showBeatsButton, setShowBeatsButton] = useState(true);
@@ -30,6 +35,8 @@ export default function Home() {
       magicHomeButton = <Link to="/">{showHomeButton && <button onClick={() => {  setShowRelButton(true); setShowBeatsButton(true); setShowCloseButton(false); setShowHomeButton(false); setPlayerStatus(false);}}>Home</button>}</Link>;
     }
   
+    const mounted = useMounted()
+    if (!mounted) return null
 
   return (
     <Router>

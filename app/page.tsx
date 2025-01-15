@@ -1,7 +1,5 @@
 'use client'
 
-import { AppProps } from 'next/app';
-
 import MuxPlayer from "@mux/mux-player-react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
@@ -13,7 +11,7 @@ import { useMounted } from './useMounted'
 
 import styles from "./page.module.css";
 
-export default function Home({ Component, pageProps }: AppProps) {
+export default function Home() {
 
   
 
